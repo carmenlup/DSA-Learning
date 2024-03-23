@@ -20,6 +20,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Images", "Images", "{B2135D46-7113-4CB1-B07F-C4C8EE275CE7}"
 	ProjectSection(SolutionItems) = preProject
 		Docs\Images\ArrayRotationRemark.png = Docs\Images\ArrayRotationRemark.png
+		Docs\Images\CarryForward.png = Docs\Images\CarryForward.png
+		Docs\Images\CarryForwardBack.png = Docs\Images\CarryForwardBack.png
 		Docs\Images\RealNumbersSet.png = Docs\Images\RealNumbersSet.png
 	EndProjectSection
 EndProject
