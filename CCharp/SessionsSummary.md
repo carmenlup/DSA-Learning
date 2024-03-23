@@ -1,17 +1,17 @@
 # Session 1
 ### Content
 1. Number of operations calculation
-1. Factors in a number: any number that divide a given number is a factor of that number
-1. Prime numbers - numbers that have only 2 factors (1 and the number itself)
-1. $log_{a}b = x => a^x = b$ (To what power we need to raise a to get b?)
+2. Factors in a number: any number that divide a given number is a factor of that number
+3. Prime numbers - numbers that have only 2 factors (1 and the number itself)
+4. $log_{a}b = x => a^x = b$ (To what power we need to raise a to get b?)
 > Log formula:
 > 1. $log_{a}a^n = n$
 
 ### Problems
 1. Count factors of a number
-1. Is a number prime?
-1. Reverse an array
-2. Rotate an array K number of times to right
+2. Is a number prime?
+3. Reverse an array
+4. Rotate an array K number of times to right
 
 Important notes on optimal solution for Rotate an array k times:
 ![Minim k rotation](./Docs/Images/ArrayRotationRemark.png "Minim k rotation")
@@ -45,8 +45,10 @@ $1 --> logN --> \sqrt{N} --> N -> N logN --> N \sqrt{N} --> N^{2} --> 2^{N} $
 ### Problems
 1. Quizzes on theory
 2. Examples
+
 # Session 4 - Carry Forward
 TBD 
+
 # Session 5 - Prefix Sum
 ### Problems
 1. Sum Range in a given array for a number of Queries
@@ -56,3 +58,24 @@ TBD
 3. Count even numbers in ranges for a given array
     - Brute force
     - Optimal solution
+
+
+# Session 6 - SubArrays
+### Content
+1. SubArray intro
+2. Print all subarrays
+3. Print all subarrays sum
+4. Return all subarrays sum
+5. Few more subarrays Q
+### Problems
+1. Print Subaray of an array from index start to index end
+2. Print Subarray of length l starting from index start
+3. Number of subarrays of an array
+    - Brute Force
+    - Optimal O(n): $`\displaystyle\frac{n(n + 1)}{2}`$
+4. Print all subarrays of a givven array
+5. Print sumof each subarray for a given array
+    - Brute Force approach
+    - PrefixSum approach
+6. Print sum for each subaray starting from a givven array
+7. Print sum for each subarray of a givvent array
