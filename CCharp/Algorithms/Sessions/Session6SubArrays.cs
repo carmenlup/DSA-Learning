@@ -12,7 +12,7 @@ namespace Algorithms.Sessions
         /// <summary>
         /// Initial problem: print a subArray from index start to index end
         /// T.C -> O(n)
-        /// S.C -> O(n) - this is O(1) for only printing. I created ana array for UT
+        /// S.C -> O(n) - this is O(1) for only printing. I created an array for UT
         /// </summary>
         /// <param name="array"></param>
         /// <param name="s"></param>
@@ -59,7 +59,7 @@ namespace Algorithms.Sessions
         /// Problem count total sub-arrays of a given array
         /// Solution: brute force
         ///     - iterate over the array 2 times to count the sub-arrays
-        /// T.C -> O(n)
+        /// T.C -> O(n^2)
         /// S.C -> O(1)
         /// </summary>
         /// <param name="input"></param>
@@ -105,6 +105,10 @@ namespace Algorithms.Sessions
         /// S.C -> O(n^2)
         ///     - iterate over array w times to find start and end index
         ///     - iterate from start to end index and add the subArray to the result
+        /// 
+        /// Remark: - for finding subaray elements we need 2 loops
+        ///         - once we found start and end of subarray 
+        ///         we need to iterate over the subarray to find the elements (third loop)
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
@@ -130,7 +134,7 @@ namespace Algorithms.Sessions
         /// <summary>
         /// Print each sub-arrays sum for a given array
         /// Solution: Brute force
-        ///     - iterate over array w times to find start and end index
+        ///     - iterate over array 2 times to find start and end index
         ///     - iterate from start to end index and calculate the sum
         /// T.C = O(n^3)
         /// S.C = O(n)
@@ -163,8 +167,9 @@ namespace Algorithms.Sessions
         /// Print each sub-arrays sum for a given array
         /// Solution: Using Prefix Sum
         ///     - calculate prefix sum
-        ///     - iterate over array w times to find start and end index
+        ///     - iterate over array 2 times to find start and end index
         ///     - calculate the sum using prefix sum (instead to iterate again)
+        /// Source leet code: https://leetcode.com/problems/subarray-sums-divisible-by-k/
         /// T.C = O(n^2)
         /// S.C = O(n)
         /// </summary>
@@ -230,7 +235,7 @@ namespace Algorithms.Sessions
         }
 
         /// <summary>
-        /// Print all sub-arrays sums starting from a index
+        /// Print all sub-arrays sums
         /// T.C = O(n^2)
         /// S.C = O(n)
         /// </summary>

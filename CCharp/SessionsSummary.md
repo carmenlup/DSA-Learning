@@ -72,7 +72,7 @@ $1 --> logN --> \sqrt{N} --> N -> N logN --> N \sqrt{N} --> N^{2} --> 2^{N} $
     - Optimal solution
 
 
-# Session 6 - SubArrays
+# Session 6 - SubArrays 
 ### Content
 1. SubArray intro
 2. Print all subarrays
@@ -85,9 +85,32 @@ $1 --> logN --> \sqrt{N} --> N -> N logN --> N \sqrt{N} --> N^{2} --> 2^{N} $
 3. Number of subarrays of an array
     - Brute Force
     - Optimal O(n): $`\displaystyle\frac{n(n + 1)}{2}`$
-4. Print all subarrays of a givven array
-5. Print sumof each subarray for a given array
+4. Print all subarrays of a given array
+5. Print sum of each subarray for a given array
     - Brute Force approach
     - PrefixSum approach
-6. Print sum for each subaray starting from a givven array
-7. Print sum for each subarray of a givvent array
+6. Print sum for each subarray starting from a given array
+7. Print sum for each subarray of a given array
+
+# Session 7 - SubArrays 2
+### Content
+1. Sum of all subarrays sum
+2. Max subaray sum of length k
+3. Min swaps required to bring all elements <= k together
+
+### Problems
+
+
+
+# Session 14 - Strings
+### Content
+1. Intro
+
+#### ASCII values
+
+<!--- add a table with cars and values ranges for ascii--->
+   | Char  | ASCII   |
+   |-------|---------|
+   | 0 - 9 | 48 - 57 |
+   | A - Z | 65 - 90 |
+   | a - z | 97 - 122|  

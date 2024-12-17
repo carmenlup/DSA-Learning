@@ -1,0 +1,4 @@
+// let dertails
+Remark
+1. we are able to reasign (set new values) to let and var
+2. cannot be redeclared within the scope

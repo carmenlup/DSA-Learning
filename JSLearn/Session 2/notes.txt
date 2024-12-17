@@ -1,0 +1,32 @@
+1. data primitive and non primitives
+
+Primitives:
+1. number 
+2. string
+    a. "" or '' for define strings in JS
+    b. `` used for multiline strings 
+3. bool
+4. null
+   is a intentionaly value  used to aassign to a variable to keep the value null
+5. undefined
+   the default values for unassigned variable or 
+   for a function that does not retun a value
+
+Nonprimitives- scope of another class
+1. BigInt
+2. Symbol
+
+References Data types
+1. functions
+2. objects
+3. arrays
+
+Function - way to declare a function
+1. declaration - statement
+2. function expression
+3. pass argument to function
+4. pass function as an argunemt to a function
+parameters - on function declaration
+arguments - when execute and pass values
+5. frirst class function - citizens?
+In JavaScript, functions are considered first-class citizens, which means they can be treated like any other data type.
