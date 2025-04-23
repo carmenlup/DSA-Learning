@@ -1,9 +1,4 @@
 ﻿using Algorithms.Sessions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Algorithms.Tests.Sessions
 {
@@ -14,6 +9,65 @@ namespace Algorithms.Tests.Sessions
         {
             _sut = new Session23Sorting();
         }
+
+        #region sorting1
+        [Theory]
+        [InlineData(new int[] { 2,1,4}, 11)]
+        [InlineData(new int[] {4, 6, 1},17)]
+        [InlineData(new int[] { 3, 5, 1, -3 }, 2)]
+        public void MinCost_Should_Return_MinCostByRemovingEachItemFromAnIntegerArray(int[] input, int expected)
+        {
+            // Act
+            var actual = _sut.MinCost(input);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
+        [InlineData(new int[] { 1, -5, 3, 5, -10, 4}, 3)]
+        [InlineData(new int[] { -3, 0, 2, 5 }, 1)]
+        public void NobleNumberBruteForce_ShouldReturn_CountOfNobleNumber(int[] input, int expected)
+        {
+            // Act
+            var actual = _sut.NobleNumberBruteForce(input);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
+        [InlineData(new int[] { 1, -5, 3, 5, -10, 4 }, 3)]
+        [InlineData(new int[] { -3, 0, 2, 5 }, 1)]
+        public void NobleNumber_ShouldReturn_CountOfNobleNumber(int[] input, int expected)
+        {
+            // Act
+            var actual = _sut.NobleNumber(input);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
+        [InlineData(new int[] { -3, 0, 2, 2, 5, 5, 5,5, 8, 8, 10,10,10,14 }, 3)]
+        public void NobelNumberDuplicateValues_ShouldReturn_CountOfNobleNumber(int[] input, int expected)
+        {
+            // Act
+            var actual = _sut.NobelNumberDuplicateValues(input);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
+        [InlineData(new int[] { 1, 2, 7, 0, 9, 3, 6, 0, 6 }, -1)]
+        public void NobleNumber_Should_Validate_NobleNumber(int[] input, int expected )
+        {
+            var currentInput = input.ToList();
+            var actual = _sut.NobleNumber(currentInput);
+            Assert.Equal(expected, actual);
+        }
+        #endregion
 
         [Theory]
         [InlineData(310, 103)]
@@ -27,7 +81,7 @@ namespace Algorithms.Tests.Sessions
         {
             var max = long.MaxValue;
             // Act
-            var actual = _sut.SmalestNumber(n);
+            var actual = _sut.SmallestNumber(n);
 
             // Assert
             Assert.Equal(expected, actual);
@@ -40,7 +94,7 @@ namespace Algorithms.Tests.Sessions
         public void SmalestNumberPositiveDigits_GivenArray_ReturnsSmalestNumber(int[] input, int[] result)
         {
             // Act
-            var actual = _sut.SmalestNumberPositiveDigits(input);
+            var actual = _sut.SmallestNumberPositiveDigits(input);
 
             // Assert
             Assert.Equal(result, actual);
@@ -52,7 +106,7 @@ namespace Algorithms.Tests.Sessions
         public void SmalestNumberWithNegative_GivenArray_ReturnsSmalestNumber(int[] input, int[] result)
         {
             // Act
-            var actual = _sut.SmalestNumberWithNegative(input);
+            var actual = _sut.SmallestNumberWithNegative(input);
 
             // Assert
             Assert.Equal(result, actual);
@@ -82,11 +136,11 @@ namespace Algorithms.Tests.Sessions
         public void MergeTwoArrays2_ShouldReturnMergedArray_AndKeepIndexItem(
             int[] list1, int[] list2, int[] expected)
         {
-            var actual = _sut.MergeAllImboxEmails(list1, list2);
+            var actual = _sut.MergeAllInboxEmails(list1, list2);
 
             Assert.Equal(expected, actual);
         }
-
+        
         [Theory]
         [InlineData(
             new[] { 1, 2, 3, 2, 5, 6 }, 
