@@ -91,3 +91,26 @@ $1 --> logN --> \sqrt{N} --> N -> N logN --> N \sqrt{N} --> N^{2} --> 2^{N} $
     - PrefixSum approach
 6. Print sum for each subaray starting from a givven array
 7. Print sum for each subarray of a givvent array
+
+
+# Recursion
+### Content
+1. Recursion intro
+1. Recursion execution
+1. Time Complexity of Recursion
+
+### Problems
+Ex1: Sum of N numbers
+1. Factorial of a number
+1. Print numbers from 1 to N
+1. Print numbers from N to 1
+1. Fobonacci series 
+
+[Recursion VS Iteration](https://www.geeksforgeeks.org/introduction-to-recursion-2/)
+
+| SR No. | Recursion                                      | Iteration                                    |
+|--------|------------------------------------------------|----------------------------------------------|
+| 1      | Terminates when the base case becomes true.    | Terminates when the condition becomes false. |
+| 2      | Used with functions.                           | Used with loops.                             |
+| 3      | Every recursive call needs extra space in the stack memory. | Every iteration does not require any extra space. |
+| 4      | Smaller code size.                             | Larger code size.                            |
