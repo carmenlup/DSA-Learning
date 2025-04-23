@@ -30,7 +30,7 @@ function maxSubarraySum(arr, k) {
 console.log(maxSubarraySum([-3, 4, -2, 5, 3, -2, 8, 2, -1, 4], 5))
 //7,8,12,16,10,11
 
-
+//-===============>
 // Given mat[n][n], print boundary in clockwise direction.
 
 // when we move from left to right the column index will increase.  
@@ -94,7 +94,11 @@ function spiralPrinting(mat) {
       console.log(mat[r][c])
       r--
     }
+    console.log(r, c)
 
+    r++
+    c++
+    console.log(r, c)
     n = n - 2
   }
 
@@ -130,3 +134,27 @@ function findtheK(mat, k) {
 }
 
 console.log(findtheK([[-10, -5, -2, 2, 4, 7], [-7, -4, -1, 3, 6, 9], [-2, 3, 5, 7, 11, 14], [3, 6, 8, 11, 14, 17], [7, 11, 12, 15, 19, 20], [10, 14, 18, 20, 24, 29]], 11))
+
+
+
+function test(A, B) {
+  let n = A.length;
+  let r = 0
+  let c = n - 1;
+  for (let i = 1; i <= n; i++) {
+    if (B > A[r][c]) {
+      r++
+    }
+    if (B < A[r][c]) {
+      c--
+    }
+    if (B === A[r][c]) {
+      return 1
+    }
+  }
+
+  return 0
+}
+
+
+// console.log(test([[-37, -15, -15, -8, 9, 17, 41, 45, 48], [-17, 2, 5, 26, 26, 32, 42, 45, 50], [-8, 3, 16, 36, 41, 46, 47, 50, 50], [0, 13, 19, 45, 45, 49, 49, 50, 50], [0, 34, 42, 49, 49, 50, 50, 50, 50], [2, 34, 49, 50, 50, 50, 50, 50, 50], [9, 44, 50, 50, 50, 50, 50, 50, 50], [19, 48, 50, 50, 50, 50, 50, 50, 50], [20, 50, 50, 50, 50, 50, 50, 50, 50]], -50))
