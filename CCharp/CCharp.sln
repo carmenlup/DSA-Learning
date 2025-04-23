@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34525.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Algorithms", "Algorithms\Algorithms.csproj", "{F794A115-619F-46F6-ACC7-83F34E014DFC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Algorithms.Tests", "Algorithms.Tests\Algorithms.Tests.csproj", "{950B47A8-47CD-4D2A-BFA0-ECE1808416DF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{38E601B5-973A-4BB7-B58D-FAB6A3DC64DC}"
+	ProjectSection(SolutionItems) = preProject
+		SessionsSummary.md = SessionsSummary.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{879B25C8-F516-479B-917E-E6771AED230A}"
+	ProjectSection(SolutionItems) = preProject
+		Docs\NumberSetsAndOperations.md = Docs\NumberSetsAndOperations.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Images", "Images", "{B2135D46-7113-4CB1-B07F-C4C8EE275CE7}"
+	ProjectSection(SolutionItems) = preProject
+		Docs\Images\ArrayRotationRemark.png = Docs\Images\ArrayRotationRemark.png
+		Docs\Images\CarryForward.png = Docs\Images\CarryForward.png
+		Docs\Images\CarryForwardBack.png = Docs\Images\CarryForwardBack.png
+		Docs\Images\RealNumbersSet.png = Docs\Images\RealNumbersSet.png
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F794A115-619F-46F6-ACC7-83F34E014DFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F794A115-619F-46F6-ACC7-83F34E014DFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F794A115-619F-46F6-ACC7-83F34E014DFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F794A115-619F-46F6-ACC7-83F34E014DFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{950B47A8-47CD-4D2A-BFA0-ECE1808416DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{950B47A8-47CD-4D2A-BFA0-ECE1808416DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{950B47A8-47CD-4D2A-BFA0-ECE1808416DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{950B47A8-47CD-4D2A-BFA0-ECE1808416DF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{879B25C8-F516-479B-917E-E6771AED230A} = {38E601B5-973A-4BB7-B58D-FAB6A3DC64DC}
+		{B2135D46-7113-4CB1-B07F-C4C8EE275CE7} = {879B25C8-F516-479B-917E-E6771AED230A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9D5ADEBB-6435-4AD2-8773-AF43ADEB7944}
+	EndGlobalSection
+EndGlobal
