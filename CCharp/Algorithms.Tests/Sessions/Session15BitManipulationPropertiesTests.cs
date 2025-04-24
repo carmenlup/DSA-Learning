@@ -184,36 +184,5 @@ namespace PracticeTests.Course.Class
             var result = _sut.GenerateIntWithTheGivenNumberOfBitsAZerosBOnesCZeros(a, b, c);
             Assert.Equal(expected, result);
         }
-
-
-
-        #region recursion
-
-        [Theory]
-        [InlineData(5, "1 2 3 4 5")]
-        public void PrintNS_Should_printAllNumbersFrom1ToN(int n, string expected)
-        {
-            var sut = new Session16RecursionBasic();
-            var result = sut.PrintNatural(n);
-            Assert.Equal(expected, result);
-        }
-
-        [Theory]
-        [InlineData(5, "1 2 3 4 5")]
-        public void PrintNS2_Should_printAllNumbersFrom1ToN(int n, string expected)
-        {
-            var sut = new Session16RecursionBasic();
-            sut.PrintNatural2(n);
-        }
-
-        [Theory]
-        [InlineData(5, "5 4 3 2 1")]
-        public void PrintNS3_Should_printAllNumbersFrom1ToN(int n, string expected)
-        {
-            var sut = new Session16RecursionBasic();
-            var result = sut.PrintNaturalDecrease(n);
-            Assert.Equal(expected, result);
-        }
-        #endregion
     }
 }
