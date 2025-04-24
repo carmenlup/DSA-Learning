@@ -61,7 +61,13 @@ $1 --> logN --> \sqrt{N} --> N -> N logN --> N \sqrt{N} --> N^{2} --> 2^{N} $
 1. Number of leaders in an array
     - Brute force: itereate over the array and get max
     - Optimal sol
+  
 # Session 5 - Prefix Sum
+### Content
+1. Range QUeries
+2. Prefix Sum
+3. Equilibrium problem
+4. Count even numbers in ranges
 ### Problems
 1. Sum Range in a given array for a number of Queries
     - Brute force 
