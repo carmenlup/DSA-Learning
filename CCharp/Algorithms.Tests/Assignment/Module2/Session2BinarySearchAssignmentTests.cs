@@ -1,19 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Algorithms.Assignment.Module2;
-using Algorithms.Sessions;
-using Microsoft.Win32.SafeHandles;
+﻿using Algorithms.Assignment.Module2;
 
 namespace Algorithms.Tests.Assignment.Module2
 {
-    public class SessionBinarySearchAssignmentTests
+    public class Session2BinarySearchAssignmentTests
     {
         private readonly Session2BinarySearchAssignment _sut;
 
-        public SessionBinarySearchAssignmentTests()
+        public Session2BinarySearchAssignmentTests()
         {
             _sut = new Session2BinarySearchAssignment();
         }
