@@ -79,5 +79,55 @@
 
             return result;
         }
+
+
+        /// <summary>
+        /// Aggressive Cows
+        /// Source: https://www.geeksforgeeks.org/aggressive-cows/
+        /// T.C = O(n * log(n))
+        /// </summary>
+        /// <param name="stalls"></param>
+        /// <param name="cows"></param>
+        /// <returns></returns>
+        public int AggressiveCows(int[] stalls, int cows)
+        {
+            Array.Sort(stalls);
+            var left = 1;
+            var right = stalls[stalls.Length - 1] - stalls[0];
+            var result = 0;
+
+            while (left <= right)
+            {
+                var mid = left + (right - left) / 2;
+                if (IsFeasible(stalls, cows, mid))
+                {
+                    result = mid;
+                    left = mid + 1;
+                }
+                else
+                {
+                    right = mid - 1;
+                }
+            }
+
+            return result;
+        }
+
+        private bool IsFeasible(int[] stalls, int cows, int minDist)
+        {
+            var count = 1;
+            var lastStall = stalls[0];
+
+            for (var i = 1; i < stalls.Length; i++)
+            {
+                if (stalls[i] - lastStall >= minDist)
+                {
+                    count++;
+                    lastStall = stalls[i];
+                }
+            }
+
+            return count >= cows;
+        }
     }
 }

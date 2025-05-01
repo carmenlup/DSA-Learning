@@ -1,9 +1,4 @@
 ﻿using Algorithms.Sessions.Module2;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Algorithms.Tests.Sessions.Module2
 {
@@ -34,6 +29,17 @@ namespace Algorithms.Tests.Sessions.Module2
         {
 
             var result = _sut.FindTimeToPaintBoard(boards, painters, totalTime);
+
+            Assert.Equal(expected, result);
+        }
+
+        [Theory]
+        [InlineData(new[] { 1, 3, 5, 8, 10, 12, 17 }, 10, 2)]
+        public void AggressiveCows_Returns_NumberOfPaintersToFillBoardsInAGivenTime(
+            int[] stalls, int d, int expected)
+        {
+
+            var result = _sut.AggressiveCows(stalls, d);
 
             Assert.Equal(expected, result);
         }
