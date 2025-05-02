@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Algorithms.Sessions
+﻿namespace Algorithms.Sessions
 {
     /// <summary>
     /// Bit Manipulation 1 - session Friday 29th Nov
@@ -76,7 +70,7 @@ namespace Algorithms.Sessions
         /// <returns></returns>
         public int CheckIthBit(int num, int i)
         {
-            // this can also be done usinf left sift operator but this can go on overflow
+            // this can also be done using left sift operator but this can go on overflow
             // if(num & (1 << i) != 0)
             //     return 1;
             // return 0;
@@ -84,8 +78,8 @@ namespace Algorithms.Sessions
         }
 
         /// <summary>
-        /// Question 4: Using left whift + and operator
-        /// this can giveoverflow exception?
+        /// Question 4: Using left shift + and operator
+        /// this can give overflow exception?
         /// </summary>
         /// <param name="num"></param>
         /// <param name="i"></param>
@@ -154,7 +148,7 @@ namespace Algorithms.Sessions
         /// Solution 2: Using Brian Kernighan’s Algorithm
         /// 
         /// Remarks: THis is better algo as in Solution 1 we ignore 32 as constant 
-        /// whereas in this solution 32 is max max value of log(n)
+        /// whereas in this solution 32 is max value of log(n)
         /// 
         /// T.C = O(log n)
         /// S.C = O(1)
@@ -208,8 +202,8 @@ namespace Algorithms.Sessions
         /// Source: https://leetcode.com/problems/single-number/
         /// 
         /// This problem can be solved using bit manipulation
-        /// However we will solve this problem in a classic way first
-        /// and we will generalize it for clasic approach 
+        /// However we will solve this problem in a classic way first,
+        /// and we will generalize it for classic approach 
         /// then we will solve and thing about bit manipulation
         /// Solution 1: Brute force
         ///     - Sort the array to cave the same numbers together
@@ -218,11 +212,11 @@ namespace Algorithms.Sessions
         /// T.C = O(n log n)
         /// S.C = O(1)
         /// </summary>
-        /// <param name="A"></param>
+        /// <param name="input"></param>
         /// <returns></returns>
-        public int FindSingleNumberClasicApproach(int[] A)
+        public int FindSingleNumberClassicApproach(int[] input)
         {
-            Array.Sort(A);
+            Array.Sort(input);
             //for (var i = 0; i < A.Length; i = i + 2)
             //{
             //    for (var j = i + 1; j < A.Length - 1; j++)
@@ -237,16 +231,16 @@ namespace Algorithms.Sessions
 
             // We don't need to have 2 loops. one loop is enough and check next element
             // this will reduce the time complexity
-            for (var i = 0; i < A.Length - 1; i = i + 2)
+            for (var i = 0; i < input.Length - 1; i = i + 2)
             {
-                if (A[i] == A[i + 1])
+                if (input[i] == input[i + 1])
                 {
                     continue;
                 }
-                return A[i];
+                return input[i];
             }
 
-            return A[A.Length - 1];
+            return input[input.Length - 1];
         }
 
         /// <summary>
@@ -262,20 +256,20 @@ namespace Algorithms.Sessions
         /// T.C = O(n log n)
         /// S.C = O(1)
         /// </summary>
-        /// <param name="A"></param>
+        /// <param name="input"></param>
         /// <returns></returns>
-        public int SingleNumber2(int[] A)
+        public int SingleNumber2(int[] input)
         {
-            Array.Sort(A);
-            for (var i = 0; i < A.Length - 2; i = i + 3)
+            Array.Sort(input);
+            for (var i = 0; i < input.Length - 2; i = i + 3)
             {
-                if (A[i] == A[i + 2])
+                if (input[i] == input[i + 2])
                 {
                     continue;
                 }
-                return A[i];
+                return input[i];
             }
-            return A[A.Length - 1];
+            return input[input.Length - 1];
         }
 
         /// <summary>
@@ -287,21 +281,21 @@ namespace Algorithms.Sessions
         /// T.C = O(n log n)
         /// S.C = O(1)
         /// </summary>
-        /// <param name="A"></param>
+        /// <param name="input"></param>
         /// <param name="k"></param>
         /// <returns></returns>
-        public int SingleNumberGeneralisation(int[] A, int k)
+        public int SingleNumberGeneralisation(int[] input, int k)
         {
-            Array.Sort(A);
-            for (var i = 0; i < A.Length - k + 1; i = i + k)
+            Array.Sort(input);
+            for (var i = 0; i < input.Length - k + 1; i = i + k)
             {
-                if (A[i] == A[i + k - 1])
+                if (input[i] == input[i + k - 1])
                 {
                     continue;
                 }
-                return A[i];
+                return input[i];
             }
-            return A[A.Length - 1];
+            return input[input.Length - 1];
         }
         #endregion
 
@@ -316,18 +310,18 @@ namespace Algorithms.Sessions
         ///     S.C -> O(1)
         /// Solution 2: Using hashset
         ///     Traverse the array and add the element to the hashset if it is not present
-        ///     Hasset will have key = number and value = count
-        ///     Traverse the Haset and return the element with count = 1
+        ///     Has set will have key = number and value = count
+        ///     Traverse the Hah set and return the element with count = 1
         ///     T.C -> O(n)
         ///     S.C -> O(n)
         /// Solution 3: Optimal Solution Using XOR operator
         ///     The next properties are used:
         ///     a ^ a = 0
-        ///     comutativity a ^ b = b ^ a
-        ///     asociativity a ^ b ^ c = a ^ (b ^ c) = (a ^ b) ^ c
-        ///     a ^ 0 = a
+        ///     commutativity a ^ b = b ^ a
+        ///     associativity a ^ b ^ c = a ^ (b ^ c) = (a ^ b) ^ c
+        ///     a ^ 0 = a.
         ///     We traverse the array once and based on properties of XOR double elements will
-        ///     cancel each other and we will have the single element
+        ///     cancel each other, and we will have the single element
         ///     T.C -> O(n)
         ///     S.C -> O(1)
         ///     
@@ -359,9 +353,9 @@ namespace Algorithms.Sessions
         public int FindSingle3(int[] input)
         {
             /*
-             * cchecck this code
+             * check this code
                 int ones = 0, twos = 0;
-                foreach(var num in nums)
+                foreach(var num in input)
                 {
                     ones = (num ^ ones) & ~twos;
                     twos = (num ^ twos) & ~ones;
@@ -401,15 +395,15 @@ namespace Algorithms.Sessions
         /// T.C = O(n)
         /// S.C = O(1)
         /// </summary>
-        /// <param name="nums"></param>
+        /// <param name="input"></param>
         /// <returns></returns>
 
-        public int[] FindSingleTwoNo(int[] nums)
+        public int[] FindSingleTwoNo(int[] input)
         {
             var allXor = 0;
-            for(var i = 0; i < nums.Length; i++)
+            for(var i = 0; i < input.Length; i++)
             {
-                allXor ^= nums[i];
+                allXor ^= input[i];
             }
 
             for(var i = 0; i < 32; i++)
@@ -422,15 +416,15 @@ namespace Algorithms.Sessions
             }
 
             var res = new int[2];
-            for (var i = 0; i < nums.Length; i++)
+            for (var i = 0; i < input.Length; i++)
             {
-                if (((nums[i] >> allXor) & 1) == 0)
+                if (((input[i] >> allXor) & 1) == 0)
                 {
-                    res[0] ^= nums[i];
+                    res[0] ^= input[i];
                 }
                 else
                 {
-                    res[1] ^= nums[i];
+                    res[1] ^= input[i];
                 }
             }
 

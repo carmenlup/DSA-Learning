@@ -1,24 +1,10 @@
 ﻿using Algorithms.Sessions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace PracticeTests.Course.Class
+namespace Algorithms.Tests.Sessions
 {
     public class Session15BitManipulationPropertiesTests
     {
-        //[Theory]
-        //[InlineData(14, 2, 1110)]
-        //[InlineData(14, 3, 211)]
-        //public void ConvertInBaseX_WillReturn_TheNumberInBaseX(int n, int x, int expected)
-        //{
-        //    var sut = new Session11BitManipulation();
-        //    var result = sut.ConvertPositiveInBaseX(n, x);
-        //    Assert.Equal(expected, result);
-        //}
-        private Session15BitManipulationProperties _sut;
+        private readonly Session15BitManipulationProperties _sut;
         public Session15BitManipulationPropertiesTests()
         {
             _sut = new Session15BitManipulationProperties();
@@ -47,9 +33,9 @@ namespace PracticeTests.Course.Class
         [Theory]
         [InlineData(new[] { 1, 2, 3, 2, 5, 5, 1 }, 3)]
         [InlineData(new[] { 1, 2, 11, 2, 5, 5, 1 }, 11)]
-        public void FindSingleNumbertBruteForce_ShouldReturn_TheSingleNumber(int[] input, int expected)
+        public void FindSingleNumberBruteForce_ShouldReturn_TheSingleNumber(int[] input, int expected)
         {
-            var result = _sut.FindSingleNumberClasicApproach(input);
+            var result = _sut.FindSingleNumberClassicApproach(input);
             Assert.Equal(expected, result);
         }
 
@@ -175,7 +161,7 @@ namespace PracticeTests.Course.Class
         [Theory]
         [InlineData(1, 2, 1, 3)]
 
-        public void GenerateIntWithTheGivvenNumberOfBitsAZerosBOnesCZeros_Should_ConstructNumber(
+        public void GenerateIntWithTheGivenNumberOfBitsAZerosBOnesCZeros_Should_ConstructNumber(
             int a, 
             int b,
             int c,

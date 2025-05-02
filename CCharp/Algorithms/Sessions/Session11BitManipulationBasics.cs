@@ -10,12 +10,12 @@ namespace Algorithms.Sessions
         ///     There are certain steps to convert a number from base 10 to base x
         ///     Math operations using reminder and division, 
         ///     also in case we are working with even numbers we need to count the number of zeros
-        /// Remark: if we manipulating string we need to reverse the string in some languages like C# 
+        /// Remark: if we manipulate string we need to reverse the string in some languages like C# 
         ///         or constrict directly the reversed sting in languages like python
         /// Steps:
         /// 1. for even number we will have the issue that the end is zero and in revers that zero will be lost
-        ///    -> for tthat reason we are counting the number of zeros and we will add them at the end
-        ///    Remark: important to find zeros at the beginning and n will b erecalculated
+        ///    -> for that reason we are counting the number of zeros. and we will add them at the end
+        ///    Remark: important to find zeros at the beginning and n will be recalculated
         /// 2. reminder = n % x
         /// 3. reverse = reverse * 10 + reminder
         /// 4. new number -> n = n / x
@@ -62,7 +62,7 @@ namespace Algorithms.Sessions
         ///     - Add 1 to the number
         /// 
         /// Check the solution on leet code on the next problem:
-        /// Leet Code Problem To practice: This Is a generalization of the next problem:
+        /// LeetCode Problem To practice: This Is a generalization of the next problem:
         /// Easy
         /// 504. Base 7
         /// https://leetcode.com/problems/base-7/description/
@@ -116,7 +116,7 @@ namespace Algorithms.Sessions
         ///     - We will use a carry to store the value of the sum of the two numbers
         ///     - We will use a StringBuilder to store the result
         ///     - We will iterate over the two strings and calculate the sum and the carry
-        ///       Remark: in case of string we need to convert the character to integer or
+        ///       Remark: in case of string we need to convert the character to integer, or
         ///               we can use the ASCII value of the character
         ///     - We will add the carry to the result
         ///     - We will reverse the result
