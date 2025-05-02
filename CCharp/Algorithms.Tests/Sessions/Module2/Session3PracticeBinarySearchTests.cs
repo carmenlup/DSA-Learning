@@ -11,6 +11,15 @@ namespace Algorithms.Tests.Sessions.Module2
             _sut = new Session3PracticeBinarySearch();
         }
 
+        [Theory]
+        [InlineData(new[] { 1, 1, 2, 3, 3, 4, 4, 8, 8 }, 2)]
+        [InlineData(new[] { 3, 3, 7, 7, 10, 11, 11 }, 10)]
+        public void SingleNonDuplicate_ShouldReturn_TheSingleElement_ForAGivenArray(int[] input, int expected)
+        {
+            var result = _sut.SingleNonDuplicate(input);
+            Assert.Equal(expected, result);
+        }
+
 
         [Theory]
         [InlineData(new[] { 4, 5, 6, 7, 0, 1, 2 }, 0, 4)]

@@ -1,20 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Algorithms.Sessions.Module2
+﻿namespace Algorithms.Sessions.Module2
 {
     public class Session3PracticeBinarySearch
     {
         /// <summary>
         /// Medium
         /// 33 Search in Rotated Sorted Array
-        /// T.C = O(n log(n));
+        /// Source: https://leetcode.com/problems/search-in-rotated-sorted-array/
+        /// T.C = O(log n);
         /// S.C = O(1)
-        /// sol: https://leetcode.com/problems/search-in-rotated-sorted-array/discuss/14436/Revised-Binary-Search
-        /// https://leetcode.com/explore/learn/card/binary-search/125/template-i/952/
         /// </summary>
         /// <param name="input"></param>
         /// <param name="target"></param>
@@ -56,6 +49,59 @@ namespace Algorithms.Sessions.Module2
             }
 
             return -1; // target not found
+        }
+
+        /// <summary>
+        /// Medium
+        /// 540. Single Element in a Sorted Array
+        ///  //https://leetcode.com/problems/single-element-in-a-sorted-array/
+        /// T.C = O(log n);
+        /// S.C = O(1)
+        /// </summary>
+        /// <param name="nums"></param>
+        /// <returns></returns>
+        public int SingleNonDuplicate(int[] nums)
+        {
+            int low = 0;
+            int high = nums.Length - 1;
+
+            var result = 0;
+            while (low <= high)
+            {
+                int mid = low + (high - low) / 2;
+
+
+                if ((mid == 0 || nums[mid] != nums[mid - 1]) &&
+                    (mid == nums.Length - 1 || nums[mid] != nums[mid + 1]))
+                    return nums[mid];
+
+                if (nums[mid] == nums[mid - 1]) // mid is the second occurence
+                {
+                    if (mid % 2 == 0) //second occurence even => search to left
+                    {
+                        //result = nums[mid];
+                        high = mid - 1;
+                    }
+                    else
+                    {
+                        low = mid + 1;
+                    }
+                }
+                else if (nums[mid] == nums[mid + 1]) // mid is first occurence
+                {
+                    if (mid % 2 == 0)
+                    {
+                        //result = nums[mid];
+                        low = mid + 1;
+                    }
+                    else
+                    {
+                        high = mid - 1;
+                    }
+                }
+            }
+
+            return -1; //single element not found
         }
 
         /// <summary>
