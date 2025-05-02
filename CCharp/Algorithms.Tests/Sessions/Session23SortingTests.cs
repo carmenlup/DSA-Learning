@@ -185,5 +185,19 @@ namespace Algorithms.Tests.Sessions
             _sut.MergeSort(list, 0, list.Length - 1);
             Assert.Equal(expected, list);
         }
+
+
+        #region additional problems
+        [Theory]
+        [InlineData(new int[] { 11, 2, 5, 7, 4 }, 20)]
+        public void MinCostElements_Should_Return_MinCostByRemoving2ItemsFromAnIntegerArray(int[] input, int expected)
+        {
+            // Act
+            var actual = _sut.MinCostElements(input);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+        #endregion
     }
 }

@@ -441,8 +441,9 @@ namespace Algorithms.Sessions
         /// <summary>
         /// Merge function splits the array in 2 parts
         /// and merges them in sorted order
+        /// Source: https://leetcode.com/problems/merge-sorted-array/
         /// T.C = O(n)
-        /// 
+        /// S.C = O(n)
         /// </summary>
         /// <param name="arr"></param>
         /// <param name="left"></param>
@@ -499,5 +500,33 @@ namespace Algorithms.Sessions
                 k++;
             }
         }
+
+        #region aditional problems
+        /// <summary>
+        /// 3469. Find Minimum Cost to Remove Array Elements
+        /// https://leetcode.com/problems/find-minimum-cost-to-remove-array-elements/
+        /// T.C = O(nlog(n))
+        /// S.C = O(1)
+        /// </summary>
+        /// <param name="nums"></param>
+        /// <returns></returns>
+        public int MinCostElements(int[] nums)
+        {
+
+            Array.Sort(nums);
+            Array.Reverse(nums);
+
+            var sum = 0;
+            for (var i = 0; i < nums.Length; i = i + 2)
+            {
+                sum += nums[i];
+            }
+
+            return sum;
+
+        }
+
+        #endregion
+
     }
 }
