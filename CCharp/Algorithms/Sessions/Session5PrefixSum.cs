@@ -19,7 +19,7 @@ namespace Algorithms.Sessions
         ///     2. iterate over the array foreach query to find the sum
         ///     3. return an array with all sums that meet the criteria
         /// T.C = O(N*Q)
-        /// S.C = O(Q)
+        /// S.C = O(1)
         /// </summary>
         /// <param name="input">N length array of integers</param>
         /// <param name="q">List of Q numbers of queries</param>
@@ -75,6 +75,7 @@ namespace Algorithms.Sessions
         /// 303. Range Sum Query - Immutable
         /// Easy
         /// https://leetcode.com/problems/range-sum-query-immutable/
+        /// Solution: Prefix Sum
         /// T.C = O(N + Q)
         /// S.C = O(N)
         /// </summary>
@@ -108,7 +109,7 @@ namespace Algorithms.Sessions
                 }
                 //for (int j = st; j <= end; j++) // O(Q)
                 //{
-                //    sum += input[j];
+                //    sum += nums[j];
                 //}
                 result.Add(sum);
             }
@@ -119,6 +120,11 @@ namespace Algorithms.Sessions
         /// <summary>
         /// Problem: For an array of integer calculate sum from left and right and count
         ///          all that are equal
+        /// Source to practice: https://app.codility.com/programmers/lessons/3-time_complexity/tape_equilibrium/
+        /// Source implementation options described in detail: https://www.geeksforgeeks.org/find-element-array-sum-left-array-equal-sum-right-array/
+        /// Practice similar problems 
+        ///     1: https://leetcode.com/problems/find-pivot-index/
+        ///     2: https://leetcode.com/problems/find-the-middle-index-in-array/
         /// Sol:
         ///     1. Calculate pSum
         ///     2. find leftSum and rightSum for each i
@@ -127,28 +133,30 @@ namespace Algorithms.Sessions
         /// T.C = O(N + N) = O(N)
         /// S.C = O(N)
         /// </summary>
-        /// <param name="input">Integer array of length N</param>
+        /// <param name="nums">Integer array of length N</param>
         /// <returns></returns>
-        public int Equilibrium(int[] input)
+        public int Equilibrium(int[] nums)
         {
-            long[] pSum = new long[input.Length];
-            var n = input.Length;
-            pSum[0] = input[0];
+            long[] pSum = new long[nums.Length];
+
+            var n = nums.Length;
+            pSum[0] = nums[0];
             for (int i = 1; i < n; i++)
             {
-                pSum[i] = pSum[i - 1] + input[i];
+                pSum[i] = pSum[i - 1] + nums[i];
             }
+
             int count = 0;
             long left;
             long right;
-            for (int i = 0; i < input.Length; i++)
+            for (int i = 0; i < nums.Length; i++)
             {
                 if (i == 0)
                     left = 0;
                 else
                     left = pSum[i - 1];
 
-                right = pSum[n -1] - input[i];
+                right = pSum[n - 1] - pSum[i];
 
                 if (left == right)
                     count++;
@@ -159,6 +167,8 @@ namespace Algorithms.Sessions
 
         /// <summary>
         /// Count even numbers in ranges for a given array
+        /// Source Inplementation explained for a range only
+        ///     https://www.geeksforgeeks.org/count-number-even-odd-elements-array/
         /// T.C = O(n * q), where n is the length of the array and q - number of queries
         /// S.C = O(q)
         /// </summary>
@@ -188,6 +198,9 @@ namespace Algorithms.Sessions
         }
 
         /// <summary>
+        /// Count even number of all subarrays sum in given array
+        /// Source: https://leetcode.com/problems/count-of-range-sum/
+        /// Source: https://leetcode.com/problems/count-number-of-nice-subarrays/
         /// T.C = O(n + q), where n is the length of the array and q - number of queries
         /// S.C = O(q)
         /// </summary>

@@ -64,6 +64,7 @@ namespace Algorithms.Tests.Sessions
         [Theory]
         [InlineData(new int[] {-3, 2, 4, -1}, 1)]
         [InlineData(new int[] {-7, 1, 5, 2, -4, 3, 0}, 2)]
+        [InlineData(new int[] { 1, 7, 3, 6, 5, 6 }, 3)]
         public void Equilibrium_Should_Count_EqualLeftSumAndRightSumOfAnIntegerArray(int[] input, int expected)
         {
             var sut = new Session5PrefixSum();
