@@ -1,11 +1,6 @@
 ﻿using Algorithms.Sessions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace PracticeTests.Course.Class
+namespace Algorithms.Tests.Sessions
 {
     public class Session11BitManipulationBasicsTests
     {
@@ -61,10 +56,10 @@ namespace PracticeTests.Course.Class
         //[Theory]
         //[InlineData(11, "Odd")]
         //[InlineData(12, "Even")]
-        //public void CheckEvenNunberBit_WillReturn_TheNumberInBaseX(int x, string expected)
+        //public void CheckEvenNumberBit_WillReturn_TheNumberInBaseX(int x, string expected)
         //{
         //    var sut = new Session11BitManipulation();
-        //    var result = sut.CheckEvenNunberBit(x);
+        //    var result = sut.CheckEvenNumberBit(x);
         //    Assert.Equal(expected, result);
         //}
 
