@@ -1,6 +1,6 @@
 ﻿namespace Algorithms.Assignment.Module1
 {
-    public class Session21HashingBasicsAssignment
+    public class Session22HashingBasicsAssignment
     {
         // Student attendance record
         // Solution:

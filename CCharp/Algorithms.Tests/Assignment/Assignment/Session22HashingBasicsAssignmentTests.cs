@@ -7,13 +7,13 @@ using Algorithms.Assignment.Module1;
 
 namespace Algorithms.Tests.Assignment.Assignment
 {
-    public class Session21HashingBasicsAssignmentTests
+    public class Session22HashingBasicsAssignmentTests
     {
-        private Session21HashingBasicsAssignment _sut;
+        private Session22HashingBasicsAssignment _sut;
 
-        public Session21HashingBasicsAssignmentTests()
+        public Session22HashingBasicsAssignmentTests()
         {
-            _sut = new Session21HashingBasicsAssignment();
+            _sut = new Session22HashingBasicsAssignment();
         }
 
         // add test for the StudentAttendance

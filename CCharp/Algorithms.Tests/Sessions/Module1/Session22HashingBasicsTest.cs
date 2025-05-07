@@ -7,13 +7,13 @@ using Algorithms.Sessions.Module1;
 
 namespace Algorithms.Tests.Sessions.Module1
 {
-    public class Session21HashingBasicsTest
+    public class Session22HashingBasicsTest
     {
-        private Session21HashingBasics _sut;
+        private Session22HashingBasics _sut;
 
-        public Session21HashingBasicsTest()
+        public Session22HashingBasicsTest()
         {
-            _sut = new Session21HashingBasics();
+            _sut = new Session22HashingBasics();
         }
 
         [Theory]

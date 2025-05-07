@@ -1,6 +1,6 @@
 ﻿namespace Algorithms.Sessions.Module1
 {
-    public class Session21HashingBasics
+    public class Session22HashingBasics
     {
         // Given an array of n elements and a query of m elements,
         // find the frequency of each element in the array.
