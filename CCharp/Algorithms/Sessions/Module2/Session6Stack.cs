@@ -50,6 +50,8 @@ namespace Algorithms.Sessions.Module2
         /// <summary>
         /// 150. Evaluate Reverse Polish Notation
         /// Source: https://leetcode.com/problems/evaluate-reverse-polish-notation/
+        /// T.C = O(n)
+        /// S.C = O(n)
         /// </summary>
         /// <param name="tokens"></param>
         /// <returns></returns>
@@ -70,15 +72,15 @@ namespace Algorithms.Sessions.Module2
 
                 if (operations.Contains(tokens[i]))
                 {
-                    var operator1 = stack.Pop();
                     var operator2 = stack.Pop();
+                    var operator1 = stack.Pop();
                     if (tokens[i] == "+")
                         result = operator1 + operator2;
                     else if (tokens[i] == "-")
                         result = operator1 - operator2;
                     else if (tokens[i] == "*")
                         result = operator1 * operator2;
-                    else if (tokens[i] == "/")
+                    else if (tokens[i] == "/" && tokens[i] != "0")
                         result = operator1 / operator2;
                     stack.Push(result);
                     continue;
