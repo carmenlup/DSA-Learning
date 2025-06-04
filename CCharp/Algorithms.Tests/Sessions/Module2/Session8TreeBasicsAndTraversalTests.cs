@@ -30,7 +30,7 @@ namespace Algorithms.Tests.Sessions.Module2
         public void PreOrderTraverse_ShouldReturn_NodeTraversalNRL(int[] expected)
         {
             // act 
-            var actual = _sut.PreOrderTraverse(_root, new List<int>());
+            var actual = _sut.PreOrderTraverse(_root);
 
             // assert
             Assert.Equal(actual, expected.ToList());
