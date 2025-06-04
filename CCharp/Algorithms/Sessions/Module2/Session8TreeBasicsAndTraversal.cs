@@ -5,6 +5,7 @@ namespace Algorithms.Sessions.Module2
     public class Session8TreeBasicsAndTraversal
     {
         #region Traversal
+        private IList<int> _result = new List<int>();
         /// <summary>
         /// Easy- NLR
         /// 144. Binary Tree PreOrder Traversal
@@ -13,19 +14,18 @@ namespace Algorithms.Sessions.Module2
         /// S.C -> O(h) where h = height of tree
         /// </summary>
         /// <param name="root"></param>
-        /// <param name="result"></param>
         /// <returns></returns>
-        public List<int> PreOrderTraverse(Node? root, List<int> result)
+        public IList<int> PreOrderTraverse(Node? root)
         {
-            if (root == null) return result;
+            if (root == null) return _result;
 
-            result.Add(root.Value);
+            _result.Add(root.Value);
 
-            PreOrderTraverse(root.Left, result);
+            PreOrderTraverse(root.Left);
 
-            PreOrderTraverse(root.Right, result);
+            PreOrderTraverse(root.Right);
 
-            return result;
+            return _result;
         }
 
         /// <summary>
@@ -36,45 +36,43 @@ namespace Algorithms.Sessions.Module2
         /// S.C -> O(h) where h = height of tree
         /// </summary>
         /// <param name="root"></param>
-        /// <param name="result"></param>
         /// <returns></returns>
-        public List<int> InOrderTraverse(Node? root, List<int> result)
+        public IList<int> InOrderTraverse(Node? root)
         {
-            if (root == null) return result;
+            if (root == null) return _result;
 
-            InOrderTraverse(root.Left, result);
+            InOrderTraverse(root.Left);
 
-            result.Add(root.Value);
+            _result.Add(root.Value);
 
-            InOrderTraverse(root.Right, result);
+            InOrderTraverse(root.Right);
 
-            return result;
+            return _result;
         }
 
 
         /// <summary>
-        /// Easy
+        /// Easy - RLN
         /// 145. Binary Tree PostOrder Traversal
         /// https://leetcode.com/problems/binary-tree-postorder-traversal/
         /// T.C -> O(n) - where n = no of nodes
         /// S.C -> O(h) where h = height of tree
         /// </summary>
         /// <param name="root"></param>
-        /// <param name="result"></param>
         /// <returns></returns>
-        public List<int> PostOrderTraverse(Node? root, List<int> result)
+        public IList<int> PostOrderTraverse(Node? root)
         {
-            if (root == null) return result;
+            if (root == null) return _result;
 
             if (root.Left != null)
-                PostOrderTraverse(root.Left, result);
+                PostOrderTraverse(root.Left);
 
             if (root.Right != null)
-                PostOrderTraverse(root.Right, result);
+                PostOrderTraverse(root.Right);
 
-            result.Add(root.Value);
+            _result.Add(root.Value);
 
-            return result;
+            return _result;
         }
 
         #endregion

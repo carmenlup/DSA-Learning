@@ -37,11 +37,11 @@ namespace Algorithms.Tests.Sessions.Module2
         }
 
         [Theory]
-        [InlineData(new int[] { 4, 2, 5, 1, 3, 6 })]
+        [InlineData(new int[] { 4, 2, 5, 1, 6, 3 })]
         public void InOrderTraverse_ShouldReturn_NodeTraversalRNL(int[] expected)
         {
             // act 
-            var actual = _sut.InOrderTraverse(_root, new List<int>());
+            var actual = _sut.InOrderTraverse(_root);
 
             // assert
             Assert.Equal(actual, expected.ToList());
@@ -52,7 +52,7 @@ namespace Algorithms.Tests.Sessions.Module2
         public void PostOrderTraverse_ShouldReturn_NodeTraversalRNL(int[] expected)
         {
             // act 
-            var actual = _sut.PostOrderTraverse(_root, new List<int>());
+            var actual = _sut.PostOrderTraverse(_root);
 
             // assert
             Assert.Equal(actual, expected.ToList());
